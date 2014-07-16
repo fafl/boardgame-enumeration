@@ -6,6 +6,8 @@ Introduction
 
 This program creates a database of optimal moves for a specific boardgame. With this database you can run an AI that plays the boardgame perfectly. The [boardgame-webserver](../../../boardgame-webserver) project does this.
 
+According to [this Wikipedia article](http://en.wikipedia.org/wiki/Solved_game) the boardgame can now be considered strongly solved.
+
 Boardgame
 ---------
 
