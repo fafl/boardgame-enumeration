@@ -39,7 +39,7 @@ This pattern is repeated until an iteration does not find any results. For the b
 
 When all iterations are done, a compacted database in binary format is created that contains the positions and its number of turns in sorted order. This makes lookups in O(log(n)) time possible.
 
-This approach is transferable to other boardgames where two players take turns alternately.
+This approach is transferable to other boardgames where two players take turns alternately. In chess it is known as [retrograde analysis](http://en.wikipedia.org/wiki/Retrograde_analysis).
 
 Why C
 -----
