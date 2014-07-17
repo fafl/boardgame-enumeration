@@ -94,7 +94,7 @@ void iterationLarge(short iteration, sqlite3 * db) {
 	long input_count = 0;
 	long result_count = 0;
 	char input_file_name[30];
-	sprintf(input_file_name, "moves.iteration%hi.txt", iteration - 1);
+	sprintf(input_file_name, "moves.iteration%.2hi.txt", iteration - 1);
 	if (!file_exists(input_file_name)) {
 		printf("Input file %s does not exist!\n", input_file_name);
 		return;
@@ -121,27 +121,6 @@ void iterationLarge(short iteration, sqlite3 * db) {
 	}
 	printf("Processed %ld positions\n", input_count);
 	fclose(input_file);
-
-	/* Read positions from sqlite
-	sqlite3_stmt * stmt;
-	char sql_text[100];
-	const char * tail;
-
-	sprintf(sql_text, "SELECT position FROM positions WHERE count = %hi;", iteration - 1);
-	sqlite3_prepare_v2(db, sql_text, 1000, &stmt, &tail);
-	while (sqlite3_step(stmt) == SQLITE_ROW) {
-		position = strtol((char*)sqlite3_column_text(stmt, 0), NULL, 10);
-		result_count += i_large_handle_position_over_in_iteration_minus_one(position, iteration, fp, db);
-
-		// Show progress
-		input_count++;
-		if (input_count % 1000 == 0) {
-			printf("Processed %ld positions\r", input_count);
-			fflush(stdout);
-		}
-	}
-	printf("Processed %ld positions\n", input_count);
-	sqlite3_finalize(stmt);*/
 
 	fclose(fp);
 	clock_t t = clock() - t0;
