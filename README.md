@@ -51,47 +51,16 @@ Executable Steps
 
 On my Macbook Air it takes around 20 days of runtime to create the database. The earlier iterations take longer than the latter. The result is a binary file of 6.89 GB. Intermediate storage of around 50 GB is needed.
 
-Iterations 1, 2 and 3 are skipped. They can be computed on the fly and take a ton of HD space.
+To create the database, you need to run the file `create_move_database.sh`
 
-To create the database, you need to run these steps:
+Trivia
+------
 
-* Compile:
+Can you solve this puzzle? The following position can be won in 65 moves:
 
-        make main
-* Run:
+![Position](/win_in_65.png?raw=true)
 
-        ./main 4
-* Store the result:
-
-        cat moves.?.txt | sort -n > moves.iteration04.txt && rm moves.?.txt
-* Create SQLite db:
-
-        sqlite3 moves.db
-* On the SQLite console enter:
-
-        PRAGMA journal_mode = OFF;
-        PRAGMA locking_mode = EXCLUSIVE;
-        PRAGMA synchronous = OFF;
-        CREATE TABLE positions (position integer, move integer, count integer);
-        .separator " "
-        .import moves.iteration04.txt positions
-        CREATE UNIQUE INDEX position_index ON positions (position ASC);
-* The following three steps have to be executed for each iteration from 5 to 65. Run them once, then replace each 5 with a 6, then with a 7, etc.
-  * Run:
-
-          ./main 5
-  * Store the result:
-
-          cat moves.?.txt | sort -n > moves.iteration05.txt && rm moves.?.txt
-  * Import:
-
-          sqlite3 --separator " " moves.db '.import moves.iteration05.txt positions'
-* Merge all results:
-
-        sort -mn moves.iteration??.txt > moves.txt && rm moves.iteration??.txt
-* Replace SQLite DB with compacted DB:
-
-        cat moves.txt | python create_compact_db.py > moves.db && rm moves.txt
+The first move is moving spock to C2. The rest is left as an exercise to the reader :P
 
 Consistency check
 -----------------
