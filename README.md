@@ -11,16 +11,16 @@ According to [this Wikipedia article](http://en.wikipedia.org/wiki/Solved_game) 
 Boardgame
 ---------
 
-The game is similar to chess. It is played by two players, one white and one black, on a board of 4 * 6 squares, where each player faces the short side. Each player owns four pieces: The rock, the paper, the scissors and the well. Before the game starts, each player arranges these pieces in any order on the four squares of the row closest to him (his "base row").
+The game is similar to chess. It is played by two players, one white and one black, on a board of 4 * 6 squares, where each player faces the short side. Each player owns four pieces: The rock, the paper, the scissors and spock. Before the game starts, each player arranges these pieces in any order on the four squares of the row closest to him (his "base row").
 
 The game is started by the white player. Players take turns alternately until the game is over. To make a move, the player chooses one of his pieces and moves it onto one of the eight squares next to it. A piece can only move to a square that is empty or where an opponent's piece is standing that can be taken. Taken pieces are removed from the game. Each piece can take opponent's pieces according to this table:
 
 | Taking Piece | Taken piece    |
 |--------------|----------------|
 | Rock         | Scissors       |
-| Paper        | Rock, Well     |
+| Paper        | Rock, Spock    |
 | Scissors     | Paper          |
-| Well         | Rock, Scissors |
+| Spock        | Rock, Scissors |
 
 The game is won when a piece reaches the opponent's base row or when all opponent's pieces are taken.
 
