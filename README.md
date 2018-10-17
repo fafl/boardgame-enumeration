@@ -56,11 +56,9 @@ To create the database, you need to run the file `create_move_database.sh`
 Trivia
 ------
 
-Can you solve this puzzle? The following position can be won in 65 moves:
+The retrograde analysis finds positions that can be won in 1, 3, or 5 moves, which a human could also easily find, but it also finds longer sequences. The longest sequence consists of a staggering 65 moves. Watch this video to view the sequence.
 
-![Position](/win_in_65.png?raw=true)
-
-The first move is moving spock to C2. The rest is left as an exercise to the reader :P
+[![Longest sequence found](https://img.youtube.com/vi/llDpeYxQMKo/0.jpg)](https://www.youtube.com/watch?v=llDpeYxQMKo)
 
 Consistency check
 -----------------
