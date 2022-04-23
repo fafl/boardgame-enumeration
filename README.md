@@ -51,7 +51,7 @@ Executable Steps
 
 On my Macbook Air it takes around 20 days of runtime to create the database. The earlier iterations take longer than the latter. The result is a binary file of 6.89 GB. Intermediate storage of around 50 GB is needed.
 
-To create the database, you need to run the file `create_move_database.sh`
+To create the database, execute the file `run_all.sh`
 
 Trivia
 ------
